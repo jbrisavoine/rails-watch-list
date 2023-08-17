@@ -1,0 +1,24 @@
+﻿<div class="container">
+  <div class="">
+    <div class="row new-form">
+      <div class="col-lg-6 left-bg-list">
+      </div>
+      <div class="col-lg-6 right-bg" >
+        <div class="row">
+      <div class="col-12">
+        <hr>
+        <div class="form">
+         <h3>Add a new movie</h3>
+        <%= simple_form_for [ @list, @bookmark ] do |f| %>
+          <%= f.input :comment, placeholder: 'Add your comment' %>
+          <%= f.input :ratings, placeholder: 'Add your rating', collection: 1..5, id: "example"  %>
+          <%= f.association :movie, input_html: { class: 'select2' } %>
+          <%= f.submit "Add movie", class: "btn btn-primary" %>
+        <% end %>
+        </div>
+    </div>
+      </div>
+    </div>
+  </div>
+
+</div>
